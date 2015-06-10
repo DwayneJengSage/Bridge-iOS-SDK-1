@@ -49,10 +49,10 @@
 
 + (instancetype)instanceWithRegisteredDependencies
 {
-  return [self managerWithAuthManager:SBBComponent(SBBAuthManager) networkManager:SBBComponent(SBBBridgeNetworkManager) objectManager:SBBComponent(SBBObjectManager)];
+  return [self managerWithAuthManager:SBBComponent(SBBAuthManager) networkManager:SBBComponent(SBBNetworkManager) objectManager:SBBComponent(SBBObjectManager)];
 }
 
-+ (instancetype)managerWithAuthManager:(id<SBBAuthManagerProtocol>)authManager networkManager:(id<SBBBridgeNetworkManagerProtocol>)networkManager objectManager:(id<SBBObjectManagerProtocol>)objectManager
++ (instancetype)managerWithAuthManager:(id<SBBAuthManagerProtocol>)authManager networkManager:(id<SBBNetworkManagerProtocol>)networkManager objectManager:(id<SBBObjectManagerProtocol>)objectManager
 {
   SBBBridgeAPIManager *manager = [[self alloc] init];
   manager.networkManager = networkManager;

@@ -32,11 +32,7 @@
 
 #import <BridgeSDK/BridgeSDK.h>
 
-@protocol SBBBridgeNetworkManagerProtocol <SBBNetworkManagerProtocol>
-
-@end
-
-@interface SBBBridgeNetworkManager : SBBNetworkManager<SBBBridgeNetworkManagerProtocol>
+@interface SBBBridgeNetworkManager : SBBNetworkManager
 
 - (instancetype)initWithAuthManager:(id<SBBAuthManagerProtocol>)authManager ;
 
